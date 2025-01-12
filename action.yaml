@@ -1,13 +1,17 @@
 name: protolint-action
 description: action for run protolint with plugins
 
-outputs:
-  modules:
-    description: 'JSON string from modules list'
+inputs:
+  fix:
+    description: 'Run protolint in fix mode'
+    required: false
+    default: false
 
 branding:
   icon: 'list'
   color: 'orange'
 runs:
   using: docker
-  image: docker://ghcr.io/ci-space/go-modules-action:v0.1.0
+  image: docker://ghcr.io/ci-space/protolint-action:v0.1.0
+  args:
+    - ${{ inputs.fix == 'true' && 'fix' || 'lint' }}
