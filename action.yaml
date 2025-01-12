@@ -1,0 +1,13 @@
+name: protolint-action
+description: action for run protolint with plugins
+
+outputs:
+  modules:
+    description: 'JSON string from modules list'
+
+branding:
+  icon: 'list'
+  color: 'orange'
+runs:
+  using: docker
+  image: docker://ghcr.io/ci-space/go-modules-action:v0.1.0
