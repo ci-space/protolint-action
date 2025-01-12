@@ -1,4 +1,6 @@
-FROM alpine:3.21.2 as builder
+# syntax=docker/dockerfile:1
+
+FROM alpine:3.21.2 AS builder
 
 RUN printf "I'm building for TARGETPLATFORM=${TARGETPLATFORM}"
 
