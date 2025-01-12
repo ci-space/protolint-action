@@ -21,4 +21,6 @@ FROM alpine:3.21.2
 COPY --from=yoheimuta/protolint:0.52.0 /usr/local/bin/protolint /usr/local/bin/protolint
 COPY --from=builder /usr/local/bin/protolint-plugins/protostyle /usr/local/bin/protolint-plugins/protostyle
 
+RUN chmod +x /usr/local/bin/protolint-plugins/protostyle
+
 ENTRYPOINT ["/usr/local/bin/protolint", "-plugin", "/usr/local/bin/protolint-plugins/protostyle"]
