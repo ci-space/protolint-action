@@ -13,5 +13,6 @@ branding:
 runs:
   using: docker
   image: docker://ghcr.io/ci-space/protolint-action:v0.1.0
-  args:
-    - ${{ inputs.fix == 'true' && 'fix' || 'lint' }}
+  entrypoint: /usr/local/bin/protolint-plugins/protostyle
+#  args:
+#    - ${{ inputs.fix == 'true' && 'fix' || 'lint' }}
