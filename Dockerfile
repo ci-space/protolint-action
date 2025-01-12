@@ -4,7 +4,7 @@ RUN apk add curl unzip
 
 RUN mkdir /usr/local/bin/protolint-plugins
 
-RUN curl -L https://github.com/ci-space/protostyle/releases/download/v0.1.0/protostyle-linux-arm64.zip -o /usr/local/bin/protolint-plugins/protostyle.zip && \
+RUN curl -L https://github.com/ci-space/protostyle/releases/download/v0.1.0/protostyle-linux-amd64.zip -o /usr/local/bin/protolint-plugins/protostyle.zip && \
       cd /usr/local/bin/protolint-plugins && \
       unzip protostyle.zip protostyle && \
       rm protostyle.zip
