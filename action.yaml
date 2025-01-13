@@ -15,6 +15,7 @@ runs:
   image: docker://ghcr.io/ci-space/protolint-action:v0.1.0
   entrypoint: ls
   args:
+     - -l
      - /usr/local/bin/protolint-plugins
 #  args:
 #    - ${{ inputs.fix == 'true' && 'fix' || 'lint' }}
