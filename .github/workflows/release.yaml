@@ -16,7 +16,7 @@ on:
 
 jobs:
   release:
-    uses: ci-space/workflows/.github/workflows/release-docker-github-action.yaml@90198056b473ff26b48439d43bf3e6bee2418749
+    uses: ci-space/workflows/.github/workflows/release-docker-github-action.yaml@14ba57f9376dd92b4e29058bd5a109291d853406
     secrets: inherit
     with:
       version: ${{ github.event.inputs.version }}
