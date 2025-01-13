@@ -2,6 +2,9 @@
 
 protolint-action - action for run protolint with plugins
 
+Supported plugins:
+* [protostyle](https://github.com/ci-space/protostyle)
+
 ## Usage example
 
 Add new job in your workflow:
