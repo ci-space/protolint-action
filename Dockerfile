@@ -2,6 +2,8 @@
 
 FROM alpine:3.20.2 AS builder
 
+ARG TARGETPLATFORM
+
 RUN printf "I'm building for TARGETPLATFORM=$TARGETPLATFORM"
 
 RUN apk -U --no-cache upgrade; /bin/rm -rf /var/cache/apk/*
