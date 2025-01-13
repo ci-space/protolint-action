@@ -12,6 +12,6 @@ branding:
   color: 'orange'
 runs:
   using: docker
-  image: docker://ghcr.io/ci-space/protolint-action:v0.1.-1
+  image: {}
   args:
     - ${{ inputs.fix == 'true' && '-fix' || '' }}
