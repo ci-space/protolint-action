@@ -24,6 +24,16 @@ RUN TP=${TARGETPLATFORM:-linux/amd64} TP_SLUG=${TP//\//-} \
 
 FROM alpine:3.20.2
 
+# https://github.com/opencontainers/image-spec/blob/main/annotations.md
+LABEL org.opencontainers.image.title="protolint-action"
+LABEL org.opencontainers.image.description="action for run protolint with plugins"
+LABEL org.opencontainers.image.url="https://github.com/ci-space/protolint-action"
+LABEL org.opencontainers.image.source="https://github.com/ci-space/protolint-action"
+LABEL org.opencontainers.image.vendor="ArtARTs36"
+LABEL org.opencontainers.image.version="${APP_VERSION}"
+LABEL org.opencontainers.image.created="${BUILD_TIME}"
+LABEL org.opencontainers.image.licenses="MIT"
+
 RUN apk -U --no-cache upgrade; /bin/rm -rf /var/cache/apk/* ; apk add gcompat
 
 RUN mkdir /protolint-plugins
