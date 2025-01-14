@@ -2,8 +2,8 @@ name: protolint-action
 description: action for run protolint with plugins
 
 branding:
-  icon: 'list'
-  color: 'orange'
+  icon: 'check-circle'
+  color: 'black'
 runs:
   using: docker
   image: docker://ghcr.io/ci-space/protolint-action:v0.1.0
