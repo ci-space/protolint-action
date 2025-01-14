@@ -1,12 +1,6 @@
 name: protolint-action
 description: action for run protolint with plugins
 
-inputs:
-  fix:
-    description: 'Run protolint in fix mode'
-    required: false
-    default: false
-
 branding:
   icon: 'list'
   color: 'orange'
@@ -15,4 +9,3 @@ runs:
   image: docker://ghcr.io/ci-space/protolint-action:v0.1.0
   args:
     - .
-    - ${{ inputs.fix == 'true' && '-fix' || '' }}
