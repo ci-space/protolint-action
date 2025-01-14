@@ -21,3 +21,9 @@ jobs:
       - name: Run linter
         uses: ci-space/protolint-action@master
 ```
+
+### 💻 Run locally
+
+```shell
+docker run -v ${PWD}:/app ghcr.io/ci-space/protolint-action:v0.1.0 /app ""
+```
