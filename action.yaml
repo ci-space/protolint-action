@@ -19,5 +19,5 @@ runs:
   using: docker
   image: docker://ghcr.io/ci-space/protolint-action:v0.1.0
   args:
-    - ${{ inputs.dir != '' && format('{0}', inputs.dir) || '.' }}
     - -config_path=${{ inputs.config_path }}
+    - ${{ inputs.dir != '' && format('{0}', inputs.dir) || '.' }}
