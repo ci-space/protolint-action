@@ -4,8 +4,19 @@ description: action for run protolint with plugins
 branding:
   icon: 'check-circle'
   color: 'black'
+
+inputs:
+  dir:
+    description: 'Path to directory'
+    required: false
+
+  config_path:
+    description: 'Path to configuration'
+    required: false
+
 runs:
   using: docker
   image: docker://ghcr.io/ci-space/protolint-action:v0.1.0
   args:
-    - .
+    - "'${{ inputs.dir != '' && format('{0}', inputs.dir) || '.' }}'"
+    - "'${{ inputs.config_path != '' && format('--config={0}', inputs.config_path) || '.protolint.yaml' }}'"
